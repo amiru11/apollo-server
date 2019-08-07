@@ -2,5 +2,13 @@
   "name": "apollo-server",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "repository": "https://github.com/amiru11/apollo-server",
+  "scripts": {
+    "start": "nodemon ./index.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "apollo-server": "^2.8.1",
+    "graphql": "^14.4.2"
+  }
 }

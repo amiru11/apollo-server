@@ -1,9 +1,7 @@
-import { books } from './db'
+import usersQuery from './query/users'
 
 const resolvers = {
-  Query: {
-    books: () => books
-  }
+  Query: { ...usersQuery }
 }
 
 export default resolvers

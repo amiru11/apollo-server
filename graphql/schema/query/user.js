@@ -1,5 +1,5 @@
 export default `
 type Query {
   getUsers: GetUsers
-  getUserById(id: Int!): User
-}`
+  getUserById(id: Int!): normalUser
+}`;

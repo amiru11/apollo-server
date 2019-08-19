@@ -1,6 +1,6 @@
-import user from "./user";
+import users from "./users";
 
 const _interface = `
-  ${user._interface}
+  ${users._interface}
 `;
 export default _interface;

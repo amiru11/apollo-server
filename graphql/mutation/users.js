@@ -1,9 +1,12 @@
+/**
+ * Sequalize <=> MySql
+ */
+
 import bcrypt from "bcrypt-nodejs";
 import models from "../models";
 
 const createUser = async (_, { params }) => {
   try {
-    console.log("user", params);
     const { password } = params;
     const user = await models.User.create({
       ...params,
@@ -12,7 +15,7 @@ const createUser = async (_, { params }) => {
 
     return user;
   } catch (err) {
-    console.log("err", err);
+    return err;
   }
 };
 
@@ -28,26 +31,24 @@ const updateUser = async (_, { params }) => {
     return user;
   } catch (err) {
     console.log("err", err);
+    return err;
   }
 };
 
-const deleteUser = async (_, { params }) => {
+const deleteUser = async (_, { id }) => {
   try {
-    const user = await models.User.findByPk(params.id);
-    await user.update({
-      deleted: !user.deleted,
-    });
+    const user = await models.User.findByPk(id);
+    await user.update({ deleted: true });
 
     return user;
   } catch (err) {
     console.log("err", err);
+    return err;
   }
 };
 
-const usersMutation = {
+export default {
   createUser,
   updateUser,
   deleteUser,
 };
-
-export default usersMutation;

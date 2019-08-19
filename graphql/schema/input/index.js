@@ -1,7 +1,9 @@
-import user from "./user";
+import users from "./users";
+import posts from "./posts";
 
 const input = `
-  ${user}
+  ${users}
+  ${posts}
 `;
 
 export default input;

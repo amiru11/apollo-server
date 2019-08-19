@@ -1,6 +1,8 @@
-import user from './user'
+import users from "./users";
+import posts from "./posts";
 
 const type = `
-  ${user.type}
-`
-export default type
+  ${users.type}
+  ${posts.type}
+`;
+export default type;

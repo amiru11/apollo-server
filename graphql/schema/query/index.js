@@ -1,7 +1,11 @@
-import user from './user'
+import users from "./users";
+import posts from "./posts";
 
 const query = `
-  ${user}
-`
+type Query {
+  ${users}
+  ${posts}
+}
+`;
 
-export default query
+export default query;

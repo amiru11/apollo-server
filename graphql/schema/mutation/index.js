@@ -1,7 +1,11 @@
-import user from "./user";
+import users from "./users";
+import posts from "./posts";
 
 const mutation = `
-  ${user}
+type Mutation {
+  ${users}
+  ${posts}
+}
 `;
 
 export default mutation;

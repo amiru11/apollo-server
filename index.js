@@ -20,7 +20,7 @@ const typeDefs = gql`
   ${input}
   ${mutation}
 `;
-const server = new ApolloServer({ typeDefs, resolvers });
+const server = new ApolloServer({ typeDefs, resolvers, mocks: false });
 
 server.listen({ port: config.port }).then(({ url }) => {
   console.log(`🚀  Server ready at ${url}`);
